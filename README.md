@@ -1,5 +1,5 @@
 # MASTER THESIS - ULMFiT experiments
-
+This repo is fork of the https://github.com/n-waves/ulmfit-multilingual
 ### INTRODUCTION
 - This is project for master thesis
 - Main idea is to use ULMFiT method to solve problem of sentiment analysis and word sense disambiguation (WSD)
@@ -19,3 +19,13 @@ hrvatskom jeziku" (Luka Krajcar, 2014), that contains tweets and their sentiment
 - train_finetuning.py - fine-tune of language model for Twitter sentiment analysis task
 
 ### GUIDE
+- git clone the repo
+- Follow the [developer installation of fastai](https://github.com/fastai/fastai#developer-install)
+- run `python create_wikitext.py -i data/wiki_extr/hr -o data/wiki/hr -l hr`
+- run both:
+    ```
+    python postprocess_wikitext.py data/wiki/hi-2 hi
+    python postprocess_wikitext.py data/wiki/hi-100 hi
+    ````
+- run `train_lm.py` for training language model for Croatian
+- check notebook experiments and other .py files for usage of ULMFiT on text classification
