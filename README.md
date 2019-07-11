@@ -23,9 +23,9 @@ hrvatskom jeziku" (Luka Krajcar, 2014), that contains tweets and their sentiment
 - Follow the [developer installation of fastai](https://github.com/fastai/fastai#developer-install)
 - run `python create_wikitext.py -i data/wiki_extr/hr -o data/wiki/hr -l hr`
 - run both:
+    ```bash
+    python postprocess_wikitext.py data/wiki/hr-2 hr
+    python postprocess_wikitext.py data/wiki/hr-100 hr
     ```
-    python postprocess_wikitext.py data/wiki/hi-2 hi
-    python postprocess_wikitext.py data/wiki/hi-100 hi
-    ````
 - run `train_lm.py` for training language model for Croatian
 - check notebook experiments and other .py files for usage of ULMFiT on text classification
